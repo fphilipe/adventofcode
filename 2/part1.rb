@@ -1,9 +1,9 @@
 Position = Struct.new(:horizontal, :depth) do
-  def forward(count) self.horizontal += count end
-  def down(count)    self.depth      += count end
-  def up(count)      self.depth      -= count end
+  def forward(count) = self.horizontal += count
+  def down(count)    = self.depth      += count
+  def up(count)      = self.depth      -= count
 
-  def multiply; horizontal * depth end
+  def multiply = horizontal * depth
 end
 
 puts ARGF.readlines

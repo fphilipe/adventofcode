@@ -1,13 +1,13 @@
 Position = Struct.new(:aim, :horizontal, :depth) do
-  def down(count) self.aim += count end
-  def up(count)   self.aim -= count end
+  def down(count) = self.aim += count
+  def up(count)   = self.aim -= count
 
   def forward(count)
     self.horizontal += count
     self.depth += aim * count
   end
 
-  def multiply; horizontal * depth end
+  def multiply = horizontal * depth
 end
 
 puts ARGF.readlines
